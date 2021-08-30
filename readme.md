@@ -1,11 +1,20 @@
 #IP_Manager
 
 / -> Home
-/login -> User login
-/profile -> User profile
+/Login
+/search -> Search
+/join -> Login
 
-/ipmanage/ -> Home Dashboard
-/ipmanage/ipinfo -> IP Info
-/ipmanage/ipupload -> IP upload
-/ipmanage/ipfind -> IP Find
-/ipmanage/ipremove -> IP Remove 
+/ip -> See Dashbord
+/ip/upload -> ip Save
+/ip/remove -> ip Remove  
+/ip/edit -> ip Edit
+
+
+/user -> User profile
+/user/singup  -> User singup
+/user/remove -> User Remove
+/user/edit -> User Edit
+
+
+Backend

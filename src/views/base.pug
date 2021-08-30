@@ -1,0 +1,24 @@
+doctype html
+html(lang="ko")
+    head
+        title #{pageTitle} | IP_Manager
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+        
+    body
+        header
+            h1=pageTitle
+        div(class='list_box')
+          div(class='list_box_menu') 
+            ul(class='list_box_menu_content')
+              li
+                a(href=`/area/upload`) 추가
+              li
+                a(href=`/area/delete`) 삭제
+          div(class='list_box_area')
+            ul(class='list_box_area_list')  
+              li(class='list_box_area_list_scourt')
+                a(href=`/ip/dashboard`) Root
+                     
+        main  
+            block content
+    include partials/footer.pug

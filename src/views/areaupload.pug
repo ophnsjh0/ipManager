@@ -1,0 +1,11 @@
+extends base.pug
+
+block content 
+  form(method="POST")
+        input(placeholder="Area", required, type="text" name="area")
+        input(placeholder="Scourt", required, type="text" name="scourt")
+        input(placeholder="Network", required, type="text" name="network")
+        input(placeholder="Subnet", required, type="text" name="subnet")
+        input(placeholder="Community", required, type="text" name="community")  
+        input(type="submit", value="Upload Area")
+  

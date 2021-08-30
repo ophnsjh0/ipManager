@@ -1,0 +1,10 @@
+extends base.pug
+include mixins/area
+
+
+block content 
+    ul
+        each info in areas
+          +area(info)
+        else
+          li Not Found ~ !!

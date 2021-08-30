@@ -1,0 +1,11 @@
+mixin area(area)
+    div
+      h4
+        a(href=`/area/${area.id}`)= area.area
+        ul
+            li 지역 : #{area.area}.
+            li 법원명: #{area.scourt}.
+            li Network : #{area.network}.
+            li SUBNET : #{area.subnet}.
+          
+      
