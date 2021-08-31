@@ -5,7 +5,7 @@ import areaRouter from "./routers/areaRouter";
 import ipRouter from "./routers/ipRouter";
 import userRouter from "./routers/userRouter";
 
-const PORT = 4000;
+
 
 const app = express();
 const logger = morgan("dev");
@@ -19,6 +19,4 @@ app.use("/area", areaRouter);
 app.use("/ip", ipRouter);
 app.use("/users", userRouter);
 
-const handleListening = () => console.log(`Server listenting on port http://localhost:${PORT}`);
-
-app.listen(PORT, handleListening);
+export default app;

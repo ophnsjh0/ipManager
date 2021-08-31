@@ -7,7 +7,7 @@
     "url": "git+https://github.com/ophnsjh0/wetube.git"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node src/server.js"
+    "dev": "nodemon --exec babel-node src/init.js"
   },
   "author": "shin",
   "license": "ISC",
@@ -17,6 +17,8 @@
   "homepage": "https://github.com/ophnsjh0/wetube#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^6.0.3",
+    "mongoose-ip-address": "0.0.6",
     "morgan": "^1.10.0",
     "pug": "^3.0.2"
   },

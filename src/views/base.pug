@@ -7,18 +7,21 @@ html(lang="ko")
     body
         header
             h1=pageTitle
-        div(class='list_box')
-          div(class='list_box_menu') 
-            ul(class='list_box_menu_content')
+        div
+          div 
+            ul
               li
                 a(href=`/area/upload`) 추가
               li
                 a(href=`/area/delete`) 삭제
-          div(class='list_box_area')
-            ul(class='list_box_area_list')  
-              li(class='list_box_area_list_scourt')
-                a(href=`/ip/dashboard`) Root
-                     
+          div
+            ul
+              li 
+                a(href=`/`) Root
+                  ul
+                    each val in areas                       
+                        li 
+                          a(href=`/`)= val.area                     
         main  
             block content
     include partials/footer.pug
