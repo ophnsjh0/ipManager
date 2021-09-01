@@ -1,14 +1,19 @@
 import Area from "../models/area";
 
 export const home = async(req, res) => {
-  const areas = await Area.find({});
-  const network = await Area.find({ network: [] });
-  console.log(network);
-  return res.render("home", {pageTitle: "Home", areas, network});
+  const areas =  await Area.find({});
+  // console.log(areas);
+  return res.render("home", {pageTitle: "Home", areas});
 };
 
 export const getAreaUpload = async(req, res) => {
-  res.render("areaupload", {pageTitle: "UpLoad Area"});
+  try{
+  const areas =  await Area.find({});
+  console.log(areas);
+  res.render("areaupload", {pageTitle: "UpLoad Area", areas});
+  } catch(error){
+      return res.render("home");
+  }
 };
 
 export const postAreaUpload = async(req, res) => {

@@ -6,8 +6,9 @@ mixin area(area)
           p 법원명: #{area.scourt}
           div  
             ul
-              each item in network         
-                li= item
+              each item in areas                
+                li
+                  a(href=`/area/${area.id}`)= item.network
           div
             small Subnet : #{area.subnet}          
           
