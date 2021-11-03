@@ -2,7 +2,19 @@ extends base.pug
 
 block content 
   form(method="POST")
-        input(placeholder="Area", required, type="text", name="area", maxlength="20")
+        select(name="area")
+          option(value="서울") 서울
+          option(value="수원") 수원
+          option(value="인천") 인천
+          option(value="대전") 대전
+          option(value="청주") 청주
+          option(value="대구") 대구
+          option(value="창원") 창원
+          option(value="광주") 광주
+          option(value="부산") 부산
+          option(value="전주") 전주
+          option(value="제주") 제주
+          option(value="울산") 울산
         input(placeholder="Scourt", required, type="text", name="scourt" maxlength="20")
         input(placeholder="switchip", required, type="text" name="switchip", minlength="7", maxlength="15", size="15", pattern="^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")  
         input(placeholder="Community", required, type="text" name="community")  

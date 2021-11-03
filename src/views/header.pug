@@ -1,0 +1,23 @@
+doctype html
+html(lang="ko")
+    head
+        title #{pageTitle} | IP_Manager
+        link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+        style(type="text/css").
+          aside {
+                display : flex;
+          }
+    body    
+      header
+        h1=pageTitle
+        nav 
+            ul
+              li
+                a(href=`/area/upload`) 추가
+              li
+                a(href=`/area/delete`) 삭제          
+    block side       
+      
+    
+
+    include partials/footer.pug

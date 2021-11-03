@@ -1,27 +1,74 @@
-doctype html
-html(lang="ko")
-    head
-        title #{pageTitle} | IP_Manager
-        link(rel="stylesheet" href="https://unpkg.com/mvp.css")
-        
-    body
-        header
-            h1=pageTitle
-        div
-          div 
-            ul
-              li
-                a(href=`/area/upload`) 추가
-              li
-                a(href=`/area/delete`) 삭제
-          div
-            ul
-              li 
-                a(href=`/`) Root
-                  ul
-                    each val in areas                       
-                        li 
-                          a(href=`/`)= val.area                     
-        main  
+extends header.pug
+
+block side
+    aside
+        ul
+            li 
+                a(href=`/`) Root                                   
+            li 서울
+                 ul
+                    each val in sl
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt 
+            li 수원
+                ul
+                    each val in sw
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt 
+            li 인천
+                ul
+                    each val in ic
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt                         
+            li 춘천
+                ul
+                    each val in cc
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt 
+            li 대전
+                ul
+                    each val in tj
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt 
+            li 청주
+                ul
+                    each val in cj
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt
+            li 대구
+                ul
+                    each val in dg
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt
+            li 창원
+                ul
+                    each val in cw
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt
+            li 광주
+                ul
+                    each val in kj
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt
+            li 부산
+                ul
+                    each val in bs
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt
+            li 전주
+                ul
+                    each val in jj
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt
+            li 제주
+                ul
+                    each val in je
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt
+            li 울산
+                ul
+                    each val in us
+                        li
+                            a(href=`/ip/${val.id}`)=val.scourt
+        main                          
             block content
-    include partials/footer.pug

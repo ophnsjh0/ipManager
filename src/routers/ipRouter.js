@@ -1,11 +1,12 @@
 import express from "express";
-import {dashboard, ipUpload, ipRemove, ipEdit, search} from "../controllers/ipController";
+import {dashboard, getIpUpload, postIpUpload, ipRemove, ipEdit, search, watch} from "../controllers/ipController";
 
 
 const ipRouter = express.Router();
 
 ipRouter.get("/", dashboard);
-ipRouter.get("/upload", ipUpload);
+ipRouter.get("/:id", watch);
+ipRouter.route("/:id/upload/").get(getIpUpload).post(postIpUpload);
 ipRouter.get("/remove", ipRemove);
 ipRouter.get("/edit", ipEdit);
 ipRouter.get("/search", search);

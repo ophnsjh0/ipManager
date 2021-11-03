@@ -1,0 +1,14 @@
+extends base.pug
+
+block content 
+  each val in name
+    h1=val.scourt
+      div
+        div 
+          ul
+            li
+              a(href=`/ip/:id/upload`) IP 추가
+            li
+              a(href=`/ip/remove`) IP 삭제
+    
+  
